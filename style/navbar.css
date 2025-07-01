@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #252321;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header>img {
+  display: flex;
+  cursor: pointer;
+}
+
+.header>a {
+  position: relative;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 18px;
+  padding: 4px;
+  font-weight: 700;
+  font-family: Titillium Web, serif;
+}
+
+
+.logo-img {
+  height: 50px;
+  width: 50px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+li>a {
+  position: relative;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 18px;
+  padding: 4px;
+  font-weight: 700;
+  font-family: Titillium Web, serif;
+}
+
+.btn2 {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #fefefe;
+  text-transform: uppercase;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.btn2::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - -2px);
+  background-color: #252321;
+  transition: 0.5s ease-out;
+  transform: scaleY(1);
+}
+
+.btn2::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 50px);
+  background-color: #252321;
+  transition: 0.5s ease-out;
+  transform: scaleY(1);
+}
+
+.btn2:hover::before {
+  transform: translateY(-25px);
+  height: 0;
+}
+
+.btn2:hover::after {
+  transform: scaleX(0);
+  transition-delay: 0.15s;
+}
+
+.btn2:hover {
+  border: 2px solid #fefefe;
+}
+
+.btn2 span {
+  position: relative;
+  z-index: 3;
+}
+
+.btn2:active {
+  color: grey;
+}
+
+.nav-btn {
+  display: none;
+}
+
+
+
+@media (max-width: 1000px) {
+  .nav-btn {
+    font-size: 2em;
+    padding-inline: 10px;
+    padding-bottom: 3px;
+    border: none;
+    background: none;
+    color: #fefefe;
+    display: block;
+    cursor: pointer;
+  }
+  ul {
+    display: none;
+  }
+}
